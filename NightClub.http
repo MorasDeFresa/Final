@@ -1,0 +1,6 @@
+@NightClub_HostAddress = http://localhost:5236
+
+GET {{NightClub_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
