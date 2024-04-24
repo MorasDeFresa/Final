@@ -35,11 +35,11 @@ namespace NightClub.Controllers
             return Ok(clase);
         }
         [HttpPost]
-        public async Task<ActionResult<Event>> CreateClass(string TypesMoneyName, DateOnly DateEvent, int MaximumClientCapacity)
+        public async Task<ActionResult<Event>> CreateClass(string EventName, DateOnly DateEvent, int MaximumClientCapacity)
         {
             try
             {
-                var createdClass = await _classService.createTypesMoney(TypesMoneyName, DateEvent, MaximumClientCapacity);
+                var createdClass = await _classService.createTypesMoney(EventName, DateEvent, MaximumClientCapacity);
                 if (createdClass == null)
                 {
                     return BadRequest("No se pudo crear la clase");
@@ -54,9 +54,9 @@ namespace NightClub.Controllers
 
 
         [HttpPut("{IdEvent}")]
-        public async Task<ActionResult<Event>> UpdateStudent(int IdEvent, DateOnly DateEvent, string? NameTypeMoney = null, int? MaximumClientCapacity = null)
+        public async Task<ActionResult<Event>> UpdateStudent(int IdEvent, DateOnly DateEvent, string? EventName = null, int? MaximumClientCapacity = null)
         {
-            var updatedClass = await _classService.updateTypesMoney(IdEvent, DateEvent, NameTypeMoney, MaximumClientCapacity);
+            var updatedClass = await _classService.updateTypesMoney(IdEvent, DateEvent, EventName, MaximumClientCapacity);
             if (updatedClass == null)
             {
                 return NotFound();

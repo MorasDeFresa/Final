@@ -13,14 +13,14 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IEventRepository, EventRepository>();
-// builder.Services.AddScoped<IHealthcareProvidersRepository, HealthcareProvidersRepository>();
+// builder.Services.AddScoped<IHealthcareProviderRepository, HealthcareProviderRepository>();
 // builder.Services.AddScoped<IHistoryClientVisitsRepository, HistoryClientVisitsRepository>();
 // builder.Services.AddScoped<ISchedulesWorkerRepository, SchedulesWorkerRePository>();
-// builder.Services.AddScoped<IStatusWorkerRepository, StatusWorkerRepository>();
+builder.Services.AddScoped<IStatusWorkerRepository, StatusWorkerRepository>();
 // builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 // builder.Services.AddScoped<ITypeDocumentRepository, TypeDocumentRepository>();
 builder.Services.AddScoped<ITypeMoneyRepository, TypeMoneyRepository>();
-// builder.Services.AddScoped<ITypesWorkerRepository, TypesWorkerRepository>();
+builder.Services.AddScoped<ITypesWorkerRepository, TypesWorkerRepository>();
 builder.Services.AddScoped<IWorkerRepository, WorkerRepository>();
 #endregion
 
@@ -29,6 +29,10 @@ builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IWorkerService, WorkerService>();
 builder.Services.AddScoped<ITypesMoneyService, TypesMoneyService>();
 builder.Services.AddScoped<IEventService, EventService>();
+builder.Services.AddScoped<ITypesWorkerService, TypesWorkerService>();
+builder.Services.AddScoped<IStatusWorkersService, StatusWorkersService>();
+// builder.Services.AddScoped<IHealthcareProviderService, HealthcareProviderService>();
+
 #endregion
 
 builder.Services.AddEndpointsApiExplorer();

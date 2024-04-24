@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WgD9gGriIFo/eRC1SmRJNAKCL1jsqwIz3pTHaSZomsavQRai7VZTfZ/vtQQhV6t35w0M6fcRq+tc41wW9UeMUw==",
+  "dgSpecHash": "ToylEwTmCM819CCTj4ZRwgB48M+csNuB4lGScZIjT5YqKmNTLvUfqn6VTzZtR/EZGdt7GX/p+Y4/N2yXp1z/aw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Downloads\\FinalNigthClub\\NightClub\\NightClub.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\Downloads\\Final\\Final\\NightClub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

@@ -4554,11 +4554,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Administrator\\Downloads\\FinalNigthClub\\NightClub\\NightClub.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\Final\\Final\\NightClub.csproj",
       "projectName": "NightClub",
-      "projectPath": "c:\\Users\\Administrator\\Downloads\\FinalNigthClub\\NightClub\\NightClub.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Downloads\\Final\\Final\\NightClub.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Administrator\\Downloads\\FinalNigthClub\\NightClub\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Downloads\\Final\\Final\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4636,7 +4636,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

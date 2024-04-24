@@ -2,32 +2,32 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NightClub.Services;
 using Microsoft.AspNetCore.Mvc;
 using NightClub.Models;
-using NightClub.Services;
 
 namespace NightClub.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
 
-    public class TypeMoneyController : ControllerBase
+    public class TypesWorkerController : ControllerBase
     {
-        private readonly ITypesMoneyService _classService;
-        public TypeMoneyController(ITypesMoneyService classService)
+        private readonly ITypesWorkerService _classService;
+        public TypesWorkerController(ITypesWorkerService classService)
         {
             _classService = classService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<TypeMoney>>> GetClasses()
+        public async Task<ActionResult<List<TypesWorker>>> GetClasses()
         {
             return Ok(await _classService.GetTypesMoneyes());
         }
-        [HttpGet("{IdTypeMoney}")]
-        public async Task<ActionResult<TypeMoney>> GetClass(int IdTypeMoney)
+        [HttpGet("{IdTypesWorker}")]
+        public async Task<ActionResult<TypesWorker>> GetClass(int IdTypesWorker)
         {
-            var clase = await _classService.GetTypesMoney(IdTypeMoney);
+            var clase = await _classService.GetTypesMoney(IdTypesWorker);
             if (clase == null)
             {
                 return NotFound("Clase no encontrada");
@@ -35,11 +35,11 @@ namespace NightClub.Controllers
             return Ok(clase);
         }
         [HttpPost]
-        public async Task<ActionResult<TypeMoney>> CreateClass(string TypeMoneyName)
+        public async Task<ActionResult<TypesWorker>> CreateClass(string TypesWorkerName, int SalaryForHour, int IdTypeMoney)
         {
             try
             {
-                var createdClass = await _classService.createTypesMoney(TypeMoneyName);
+                var createdClass = await _classService.createTypesMoney(TypesWorkerName, SalaryForHour, IdTypeMoney);
                 if (createdClass == null)
                 {
                     return BadRequest("No se pudo crear la clase");
@@ -53,10 +53,10 @@ namespace NightClub.Controllers
         }
 
 
-        [HttpPut("{IdTypeMoney}")]
-        public async Task<ActionResult<TypeMoney>> UpdateStudent(int IdTypeMoney, string? TypeMoneyName = null)
+        [HttpPut("{IdTypesWorker}")]
+        public async Task<ActionResult<TypesWorker>> UpdateStudent(int SalaryForHour, int IdTypesWorker, string? TypesWorkerName = null)
         {
-            var updatedClass = await _classService.updateTypesMoney(IdTypeMoney, TypeMoneyName);
+            var updatedClass = await _classService.updateTypesMoney(IdTypesWorker, TypesWorkerName, SalaryForHour);
             if (updatedClass == null)
             {
                 return NotFound();
@@ -64,10 +64,10 @@ namespace NightClub.Controllers
             return Ok(updatedClass);
         }
 
-        [HttpDelete("{IdTypeMoney}")]
-        public async Task<ActionResult<TypeMoney>> DeleteClass(int IdTypeMoney)
+        [HttpDelete("{IdTypesWorker}")]
+        public async Task<ActionResult<TypesWorker>> DeleteClass(int IdTypesWorker)
         {
-            var student = await _classService.deleteTypesMoney(IdTypeMoney);
+            var student = await _classService.deleteTypesMoney(IdTypesWorker);
             if (student == null)
             {
                 return NotFound();
