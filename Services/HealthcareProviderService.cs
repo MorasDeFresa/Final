@@ -18,8 +18,8 @@ namespace NightClub.Services
 
     public class HealthcareProviderService : IHealthcareProviderService
     {
-        private readonly HealthcareProviderRepository _typeRepository;
-        public HealthcareProviderService(HealthcareProviderRepository typeRepository)
+        private readonly IHealthcareProviderRepository _typeRepository;
+        public HealthcareProviderService(IHealthcareProviderRepository typeRepository)
         {
             _typeRepository = typeRepository;
         }

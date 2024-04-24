@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using NightClub.Models;
 using NightClub.Services;
 
-namespace Final.Controllers
+namespace NightClub.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -42,7 +42,7 @@ namespace Final.Controllers
                 var createdClass = await _classService.createTypesMoney(StatusWorkerName);
                 if (createdClass == null)
                 {
-                    return BadRequest("No se pudo crear la clase");
+                    return BadRequest("No se pudo crear el estatus");
                 }
                 return Ok($"Se ha creado el estatus correctamente");
             }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NightClub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf6e3f3b39812f88de084ce44af5bf263c5f1677")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8049b470a76b4cc16d8ff407d63625f2473eba7")]
 [assembly: System.Reflection.AssemblyProductAttribute("NightClub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NightClub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

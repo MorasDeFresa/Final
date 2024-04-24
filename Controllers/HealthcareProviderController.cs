@@ -42,9 +42,9 @@ namespace NightClub.Controllers
                 var createdClass = await _classService.createTypesMoney(PhoneEmergency, HealthcareProviderName);
                 if (createdClass == null)
                 {
-                    return BadRequest("No se pudo crear la clase");
+                    return BadRequest("No se pudo crear el provedor");
                 }
-                return Ok($"Se ha creado el tipo correctamente");
+                return Ok($"Se ha creado el provedor correctamente");
             }
             catch (Exception ex)
             {

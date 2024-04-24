@@ -11,23 +11,23 @@ namespace NightClub.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    public class TypeMoneyController : ControllerBase
+    public class TypeDocumentController : ControllerBase
     {
-        private readonly ITypesMoneyService _classService;
-        public TypeMoneyController(ITypesMoneyService classService)
+        private readonly ITypeDocumentService _classService;
+        public TypeDocumentController(ITypeDocumentService classService)
         {
             _classService = classService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<TypeMoney>>> GetClasses()
+        public async Task<ActionResult<List<TypeDocument>>> GetClasses()
         {
             return Ok(await _classService.GetTypesMoneyes());
         }
-        [HttpGet("{IdTypeMoney}")]
-        public async Task<ActionResult<TypeMoney>> GetClass(int IdTypeMoney)
+        [HttpGet("{IdTypeDocument}")]
+        public async Task<ActionResult<TypeDocument>> GetClass(int IdTypeDocument)
         {
-            var clase = await _classService.GetTypesMoney(IdTypeMoney);
+            var clase = await _classService.GetTypesMoney(IdTypeDocument);
             if (clase == null)
             {
                 return NotFound("Clase no encontrada");
@@ -35,14 +35,14 @@ namespace NightClub.Controllers
             return Ok(clase);
         }
         [HttpPost]
-        public async Task<ActionResult<TypeMoney>> CreateClass(string TypeMoneyName)
+        public async Task<ActionResult<TypeDocument>> CreateClass(string TypeDocumentName)
         {
             try
             {
-                var createdClass = await _classService.createTypesMoney(TypeMoneyName);
+                var createdClass = await _classService.createTypesMoney(TypeDocumentName);
                 if (createdClass == null)
                 {
-                    return BadRequest("No se pudo crear el tipo");
+                    return BadRequest("No se pudo crear la el tipo de documento");
                 }
                 return Ok($"Se ha creado el tipo correctamente");
             }
@@ -53,10 +53,10 @@ namespace NightClub.Controllers
         }
 
 
-        [HttpPut("{IdTypeMoney}")]
-        public async Task<ActionResult<TypeMoney>> UpdateStudent(int IdTypeMoney, string? TypeMoneyName = null)
+        [HttpPut("{IdTypeDocument}")]
+        public async Task<ActionResult<TypeDocument>> UpdateStudent(int IdTypeDocument, string? TypeDocumentName = null)
         {
-            var updatedClass = await _classService.updateTypesMoney(IdTypeMoney, TypeMoneyName);
+            var updatedClass = await _classService.updateTypesMoney(IdTypeDocument, TypeDocumentName);
             if (updatedClass == null)
             {
                 return NotFound();
@@ -64,10 +64,10 @@ namespace NightClub.Controllers
             return Ok(updatedClass);
         }
 
-        [HttpDelete("{IdTypeMoney}")]
-        public async Task<ActionResult<TypeMoney>> DeleteClass(int IdTypeMoney)
+        [HttpDelete("{IdTypeDocument}")]
+        public async Task<ActionResult<TypeDocument>> DeleteClass(int IdTypeDocument)
         {
-            var student = await _classService.deleteTypesMoney(IdTypeMoney);
+            var student = await _classService.deleteTypesMoney(IdTypeDocument);
             if (student == null)
             {
                 return NotFound();

@@ -42,7 +42,7 @@ namespace NightClub.Controllers
                 var createdClass = await _classService.createTypesMoney(EventName, DateEvent, MaximumClientCapacity);
                 if (createdClass == null)
                 {
-                    return BadRequest("No se pudo crear la clase");
+                    return BadRequest("No se pudo crear el evento");
                 }
                 return CreatedAtAction(nameof(GetClass), new { ClassId = createdClass.IdEvent }, createdClass);
             }

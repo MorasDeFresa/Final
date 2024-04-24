@@ -42,7 +42,7 @@ namespace NightClub.Controllers
                 var createdClass = await _classService.createTypesMoney(TypesWorkerName, SalaryForHour, IdTypeMoney);
                 if (createdClass == null)
                 {
-                    return BadRequest("No se pudo crear la clase");
+                    return BadRequest("No se pudo crear el tipo ");
                 }
                 return Ok($"Se ha creado el tipo correctamente");
             }
